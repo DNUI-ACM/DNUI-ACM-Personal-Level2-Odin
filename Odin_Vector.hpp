@@ -6,6 +6,7 @@
  template<typename Object>
  class Vector
  {
+	 //const static int QAQ = 4;
  public:
  	using size_type = size_t;
 	using iterator = Object*;
@@ -26,11 +27,11 @@
         Object operator *()
         {
             return *A;
-        }
+        }//error
         Reverse_Iterator operator ++()
         {
             return --A;
-        }
+        }//error
         Reverse_Iterator operator ++(size_t)
         {
             Object* tmp = A;
@@ -77,7 +78,7 @@
 		,theCapacity(QAQ)
 		{
 			Objects = new Object[theCapacity];
-		}
+		}//error
 	
 	    explicit Vector(size_t a) 
 	    :theSize(a)
@@ -160,7 +161,7 @@
 	    		theSize = newSize;
 		    } 
 		}
-	 	void resize(size_t Z, Object E)
+	 	void resize(size_t Z, Object E)//error
 		{
 			if(Z <= theSize)
 			{
